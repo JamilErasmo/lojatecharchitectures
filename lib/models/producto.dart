@@ -36,12 +36,12 @@ class Producto {
  Future<void> actualizarDetalle() async {
     // Lógica para actualizar detalles del producto
 
-     //cambiar los nombres respectivos para el main de la coneccion a firebase
+    //cambiar los nombres respectivos para el main de la coneccion a firebase
   DatabaseReference miRef = FirebaseDatabase.getInstance().getReference();
   DatabaseReference productoRef = miRef.child("productos").child(nombre);
-  // Asume que 'detalle' es un HashMap que contiene los nuevos valores para el detalle del producto
+    // Asume que 'detalle' es un HashMap que contiene los nuevos valores para el detalle del producto
   productoRef.updateChildren(detalle);
-  
+
  }
 
  Future<void> retornarEstado() async {
