@@ -1,5 +1,6 @@
 import 'proveedor.dart';
 import 'bodega.dart';
+import 
 
 class Producto {
   Bodega bodega;
@@ -27,15 +28,39 @@ class Producto {
   });
 
   // Métodos de la clase Producto
-  void actualizarDetalle(String nombre) {}
 
+ Future<void> retornarDatos() async {
+    // Lógica para obtener datos del producto
+ }
+
+ Future<void> actualizarDetalle() async {
+    // Lógica para actualizar detalles del producto
+
+     //cambiar los nombres respectivos para el main de la coneccion a firebase
+  DatabaseReference miRef = FirebaseDatabase.getInstance().getReference();
+  DatabaseReference productoRef = miRef.child("productos").child(nombre);
+  // Asume que 'detalle' es un HashMap que contiene los nuevos valores para el detalle del producto
+  productoRef.updateChildren(detalle);
+  
+ }
+
+ Future<void> retornarEstado() async {
+    // Lógica para obtener estado del producto
+ }
+
+ Future<void> asignarEstado() async {
+    // Lógica para asignar estado al producto
+ }
+
+/*
   String retornaEstado(String nombre) {
     return "";
   }
-
+  
   Map<String, dynamic> retornarDatos() {
     return {};
   }
+*/
 }
 
 class Medicamento {
