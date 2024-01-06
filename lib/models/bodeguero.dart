@@ -1,3 +1,5 @@
+import 'producto.dart';
+
 class Bodeguero {
   String apellido;
   String cedula;

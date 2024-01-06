@@ -1,3 +1,6 @@
+import 'bodeguero.dart';
+import 'producto.dart';
+
 class Bodega {
   int capacidadAlmacenamiento;
   String idBodega;

@@ -1,3 +1,6 @@
+import 'proveedor.dart';
+import 'bodega.dart';
+
 class Producto {
   Bodega bodega;
   double cantidad;
